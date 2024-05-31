@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Car Launch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                   <b> <a href="#">BUJJI HERO</a></b>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#preorder">Preorder</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero Section -->
+<div class="hero">
+    <video autoplay muted loop id="hero-video">
+        <source src="hero-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="hero-overlay">
+        <div class="container">
+            <h1>Experience the Future of Mobility</h1>
+            <p>The new Bujji – Redefining Electric Driving</p>
+            <a href="#preorder" class="cta-btn">Preorder Now</a>
+        </div>
+    </div>
+</div>
+    </header>
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <img src="feature1.jpg" alt="Long Range Battery">
+                    <h3 style="color:white;">Long Range Battery</h3>
+                    <p style="color:white;">Up to 400 miles on a single charge</p>
+                </div>
+                <div class="feature">
+                    <img src="feature2.jpg" alt="Fast Charging">
+                    <h3 style="color:white;">Fast Charging</h3>
+                    <p style="color:white;">80% charge in 30 minutes</p>
+                </div>
+                <div class="feature">
+                    <img src="feature3.jpg" alt="Advanced Safety">
+                    <h3 style="color:white;">Advanced Safety</h3>
+                    <p style="color:white;">Cutting-edge safety features and autonomous driving capabilities</p>
+                </div>
+                <div class="feature">
+                    <img src="feature4.jpg" alt="Luxury Interior">
+                    <h3 style="color:white;">Luxury Interior</h3>
+                    <p style="color:white;">Premium materials and state-of-the-art infotainment system</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="specs" class="specs">
+        <div class="container">
+            <h2>Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h3>Battery Capacity</h3>
+                    <p>85 kWh</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Motor Power</h3>
+                    <p>450 HP</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Top Speed</h3>
+                    <p>155 mph</p>
+                </div>
+                <div class="spec-item">
+                    <h3>0-60 mph</h3>
+                    <p>3.5 seconds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 style="color:white;">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <p style="color:white;">"The best electric car experience I've ever had!"</p>
+                    <h4 style="color:white;">- Jane Doe</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p style="color:white;">"Incredible range and performance, highly recommend."</p>
+                    <h4 style="color:white;">- John Smith</h4>
+                </div>
+                <div class="testimonial-slide">
+                    <p style="color:white;">"Luxurious and powerful, an absolute pleasure to drive."</p>
+                    <h4 style="color:white;">- Emily Johnson</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="preorder" class="cta">
+        <div class="container">
+            <h2 style="color:white;">Ready to Experience the Future?</h2>
+            
+            <a href="#" class="cta-btn" onclick="openModal('testDriveModal')">Sign Up for Test Drive</a>
+            <a href="#" class="cta-btn" onclick="openModal('preorderModal')">Preorder Now</a>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Contact us: email@example.com | +123 456 7890</p>
+            <p>Follow us: 
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="testDriveModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('testDriveModal')">&times;</span>
+            <h2>Sign Up for a Test Drive</h2>
+            <form onsubmit="return validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="preorderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('preorderModal')">&times;</span>
+            <h2>Preorder Now</h2>
+            <form onsubmit="return validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

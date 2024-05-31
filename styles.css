@@ -1,0 +1,346 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 70px; /* Adjust for navbar */
+}
+
+.hero-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.hero-overlay .cta-btn {
+    background: #007bff;
+    color:  #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero-overlay .cta-btn:hover {
+    background: #0056b3;
+}
+
+
+.cta-btn {
+    background:#080522;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-btn:hover {
+    background: #081c31;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background-color:  #080522; /* Light blue background color */
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:  #ffffff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background:  #080522;
+    padding: 20px;
+    text-align: center;
+    color:  #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.feature h3 {
+    margin: 10px 0;
+}
+
+.feature p {
+    color: #555;
+}
+
+
+/* Specifications Section */
+.specs {
+    padding: 50px 0;
+    background: url('specs-bg.jpg') no-repeat center center/cover;
+    color:  #ffffff; /* Change text color to white for better contrast */
+    position: relative;
+}
+
+.specs::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add overlay to darken the background image */
+}
+
+.specs .container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+.specs h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.specs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.spec-item {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for each spec item */
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 45%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spec-item h3 {
+    margin-bottom: 10px;
+}
+
+.spec-item p {
+    margin-bottom: 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+    background: #080522;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.testimonial-slide p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.testimonial-slide h4 {
+    font-size: 1em;
+    color: #3b2046;
+}
+
+/* CTA Section */
+.cta {
+    background:  #080522;
+    color: #ffffff;;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: left;
+}
+
+.modal-content .close {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+}
+
+.modal-content input,
+.modal-content button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background: white;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: white;
+}
